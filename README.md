@@ -118,7 +118,7 @@ Más detalle de hallazgos y decisiones técnicas en [`EVALUATION.md`](./EVALUATI
 
 ## 7. Uso de IA
 
-Este framework fue diseñado y generado con asistencia de **Claude** (Anthropic), en su interfaz de chat estándar (claude.ai). No se usaron MCP servers, skills personalizadas ni agentes autónomos: la interacción fue conversacional (definición de arquitectura, patrón de diseño y generación de código), con verificación puntual vía búsqueda web del comportamiento real de Fake Store API en los endpoints de error, documentada en `EVALUATION.md`.
+Este framework fue diseñado y generado con asistencia de **Claude** (Anthropic), en su interfaz de chat estándar. No se usaron MCP servers, skills personalizadas ni agentes autónomos.
 
 # Automation_test_APIs_Playwright
 
