@@ -5,12 +5,12 @@ Framework de automatización de pruebas de API REST sobre [Fake Store API](https
 
 ## 1. Stack y por qué
 
-| Herramienta | Rol | Justificación |
-|---|---|---|
-| **Playwright Test** | Test runner + cliente HTTP (`APIRequestContext`) | Ejecución en paralelo nativa, reporte HTML/JSON/JUnit incorporado, `trace` para depurar fallos sin herramientas extra. |
-| **TypeScript** | Lenguaje | Tipado fuerte en clients y schemas: errores de contrato se detectan en compilación, no en ejecución. |
-| **Zod** | Validación de esquemas | Validación declarativa de estructura y tipos (`price` como `number`, `rating` anidado), con mensajes de error legibles. |
-| **@faker-js/faker** | Generación de datos dinámicos | Evita datos "quemados" que enmascaran falsos positivos entre corridas. |
+| Herramienta         | Rol                                              | Justificación                                                                                                           |
+| ------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| **Playwright Test** | Test runner + cliente HTTP (`APIRequestContext`) | Ejecución en paralelo nativa, reporte HTML/JSON/JUnit incorporado, `trace` para depurar fallos sin herramientas extra.  |
+| **TypeScript**      | Lenguaje                                         | Tipado fuerte en clients y schemas: errores de contrato se detectan en compilación, no en ejecución.                    |
+| **Zod**             | Validación de esquemas                           | Validación declarativa de estructura y tipos (`price` como `number`, `rating` anidado), con mensajes de error legibles. |
+| **@faker-js/faker** | Generación de datos dinámicos                    | Evita datos "quemados" que enmascaran falsos positivos entre corridas.                                                  |
 
 ### Versiones utilizadas
 
@@ -103,19 +103,23 @@ También se generan `test-results/results.json` y `test-results/junit.xml` para 
 
 ## 6. Casos implementados
 
-| # | Caso | Tipo | Archivo |
-|---|---|---|---|
-| 1 | Obtener producto específico | Positivo | `products.get.spec.ts` |
-| 2 | Listar productos por categoría | Positivo | `products.category.spec.ts` |
-| 3 | Crear producto exitosamente | Positivo | `products.create.spec.ts` |
-| 4 | Actualizar producto completo | Positivo | `products.update.spec.ts` |
-| 5 | Producto no encontrado | Negativo | `products.get.spec.ts` |
-| 6 | Categoría inválida | Negativo | `products.category.spec.ts` |
-| 7 | Crear producto con datos inválidos | Negativo | `products.create.spec.ts` |
-| 8 | Validación de límites de productos | Positivo + edge cases | `products.pagination.spec.ts` |
+| #   | Caso                               | Tipo                  | Archivo                       |
+| --- | ---------------------------------- | --------------------- | ----------------------------- |
+| 1   | Obtener producto específico        | Positivo              | `products.get.spec.ts`        |
+| 2   | Listar productos por categoría     | Positivo              | `products.category.spec.ts`   |
+| 3   | Crear producto exitosamente        | Positivo              | `products.create.spec.ts`     |
+| 4   | Actualizar producto completo       | Positivo              | `products.update.spec.ts`     |
+| 5   | Producto no encontrado             | Negativo              | `products.get.spec.ts`        |
+| 6   | Categoría inválida                 | Negativo              | `products.category.spec.ts`   |
+| 7   | Crear producto con datos inválidos | Negativo              | `products.create.spec.ts`     |
+| 8   | Validación de límites de productos | Positivo + edge cases | `products.pagination.spec.ts` |
 
 Más detalle de hallazgos y decisiones técnicas en [`EVALUATION.md`](./EVALUATION.md).
 
 ## 7. Uso de IA
 
 Este framework fue diseñado y generado con asistencia de **Claude** (Anthropic), en su interfaz de chat estándar (claude.ai). No se usaron MCP servers, skills personalizadas ni agentes autónomos: la interacción fue conversacional (definición de arquitectura, patrón de diseño y generación de código), con verificación puntual vía búsqueda web del comportamiento real de Fake Store API en los endpoints de error, documentada en `EVALUATION.md`.
+
+# Automation_test_APIs_Playwright
+
+Automatización de Pruebas de APIs - Reto técnico QA
