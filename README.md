@@ -1,6 +1,6 @@
 # Fake Store API — Framework de Automatización de Pruebas
 
-Reto Técnico QA Semi Senior — Banco Pichincha, Chapter QA/QE.
+Reto Técnico QA
 Framework de automatización de pruebas de API REST sobre [Fake Store API](https://fakestoreapi.com), construido con **Playwright Test + TypeScript + Zod**.
 
 ## 1. Stack y por qué
