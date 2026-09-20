@@ -1,0 +1,23 @@
+{
+  "name": "fakestore-api-tests",
+  "version": "1.0.0",
+  "description": "Framework de automatizacion de pruebas de API para Fake Store API - Reto Tecnico QA Semi Senior, Banco Pichincha",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "test:ui": "playwright test --ui",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@faker-js/faker": "^9.0.3",
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3",
+    "zod": "^3.23.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
