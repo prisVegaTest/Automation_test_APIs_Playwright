@@ -23,7 +23,7 @@ Framework de automatización de pruebas de API REST sobre [Fake Store API](https
 ## 2. Instalación
 
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/prisVegaTest/Automation_test_APIs_Playwright.git
 cd fakestore-api-tests
 npm install
 npx playwright install
